@@ -1,5 +1,7 @@
 package Practics;
 
+import java.util.Scanner;
+
 public class forPractics {
     public static void main(String[] args) {
 //        for (int i = 10; i > 0; i--) {
@@ -47,19 +49,60 @@ public class forPractics {
 //            System.out.println();
 //        }
 
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+//        for (int i = 1; i <= 5; i++) {
+//            for (int j = 1; j <= i; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+//
+//        for (int i = 1; i <= 5; i++) {
+//            System.out.print(" ");
+//            for (int j = 1; j <= i; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.print(" ");
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Введите число: ");
+//        int number = sc.nextInt();
+//        int sum = 0;
+//
+//        while (number > 0) {
+//            sum += number % 10;
+//            number /= 10;
+//        }
+//        System.out.println("<UNK> <UNK>: " + sum);
+
+//        String name = "Yan Miskin";
+//        String gender = "";
+//        for (int i = name.length() - 1; i >=0 ; i--) {
+//            gender += name.charAt(i);
+//        }
+//        System.out.println(gender);
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string");
+        String s = sc.nextLine();
+        System.out.println("Enter the letter");
+        char ch = sc.next().charAt(0);
+        boolean flag = false;
+        int position = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ch) {
+                flag = true;
+                position = i;
+                break;
             }
-            System.out.println();
+        }
+        if (flag == true) {
+            System.out.println("Letter is found " + position);
+        } else {
+            System.out.println("Letter is not found at position ");
         }
 
     }
